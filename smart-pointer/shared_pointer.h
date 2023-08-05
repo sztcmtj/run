@@ -65,7 +65,7 @@ public:
     }
 
     bool operator==(SharedPointer& rhs) {
-        return m_p == rhs.m_p && m_count == rhs.m_count;
+        return m_p == rhs.m_p;
     }
 
     T* get() {
