@@ -97,6 +97,10 @@ public:
         std::cout << "release 不释放对象" << std::endl;
     }
 
+    explicit operator bool() const noexcept {
+        return m_p != NULL;
+    }
+
 private:
     // 实际裸指针
     T* m_p = NULL;
