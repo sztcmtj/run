@@ -18,9 +18,9 @@ public:
     String& operator=(const String& s);
     String& operator=(const char* s);
     String& operator+=(const String& s);
-    friend int operator==(const String& s1, const String& s2);
-    friend int operator==(const String& s1, const String& s2);
-    friend int operator==(const String& s1, const String& s2);
+    friend bool operator==(const String& s1, const String& s2);
+    friend bool operator>(const String& s1, const String& s2);
+    friend bool operator<(const String& s1, const String& s2);
     char& operator[](int index);
     const char& operator[](int index) const;
     friend std::ostream& operator<<(std::ostream& os, String& s);
@@ -32,6 +32,5 @@ private:
     int len;
     char* str;
 };
-
 
 #endif
